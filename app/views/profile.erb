@@ -1,0 +1,18 @@
+<div class="container">
+
+  <% if session[:user_id] %>
+
+  <h2> Your Surveys </h2>
+
+    <table>
+      <% @surveys.each do |s| %>
+      <tr>
+        <td><a href="/user/<%= @user.id %>/album/<%=s.id%>"><%=s.name%></a></td>
+      </tr>
+      <%end%>
+    </table>
+
+    <% end %>
+
+
+</div>
